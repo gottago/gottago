@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Building:</b>
+  <%= @bathroom.building %>
+</p>
+
+<p>
+  <b>Floor:</b>
+  <%= @bathroom.floor %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @bathroom.gender %>
+</p>
+
+<p>
+  <b>Cleanliness:</b>
+  <%= @bathroom.cleanliness %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @bathroom.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_bathroom_path(@bathroom) %> |
+<%= link_to 'Back', bathrooms_path %>

@@ -1,0 +1,32 @@
+<h1>Gotta Go</h1>
+<h2>Listing bathrooms</h2>
+
+<table>
+  <tr>
+    <th>Building</th>
+    <th>Floor</th>
+    <th>Gender</th>
+    <th>Cleanliness</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bathrooms.each do |bathroom| %>
+  <tr>
+    <td><%= bathroom.building %></td>
+    <td><%= bathroom.floor %></td>
+    <td><%= bathroom.gender %></td>
+    <td><%= bathroom.cleanliness %></td>
+    <td><%= bathroom.notes %></td>
+    <td><%= link_to 'Show', bathroom %></td>
+    <td><%= link_to 'Edit', edit_bathroom_path(bathroom) %></td>
+    <td><%= link_to 'Destroy', bathroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bathroom', new_bathroom_path %>

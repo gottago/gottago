@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  building: MyString
+  floor: 1
+  gender: false
+  cleanliness: 1
+  notes: MyText
+
+two:
+  building: MyString
+  floor: 1
+  gender: false
+  cleanliness: 1
+  notes: MyText
