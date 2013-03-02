@@ -25,6 +25,14 @@
   <%= @bathroom.notes %>
 </p>
 
+<h2>Comments</h2>
+<% if @bathroom.comments.empty? %>
+  <p>No comments found.</p>
+<% end %>
+<%= render @bathroom.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
 
 <%= link_to 'Edit', edit_bathroom_path(@bathroom) %> |
 <%= link_to 'Back', bathrooms_path %>

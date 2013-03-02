@@ -1,0 +1,29 @@
+<%= form_for([@bathroom, @bathroom.comments.build]) do |f| %>
+  <% if @bathroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bathroom.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @bathroom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :commenter %><br />
+    <%= f.text_field :commenter %>
+  </div>
+  <div class="field">
+    <%= f.label :cleaniness %><br />
+    <%= f.number_field :cleaniness %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

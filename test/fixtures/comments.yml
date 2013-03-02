@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  commentor: MyString
+  cleaniness: 1
+  comment: MyText
+  bathroom: 
+
+two:
+  commentor: MyString
+  cleaniness: 1
+  comment: MyText
+  bathroom: 

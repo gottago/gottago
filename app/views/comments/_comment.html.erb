@@ -1,0 +1,19 @@
+<p>
+  <b>Commenter:</b>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <b>Cleaniness:</b>
+  <%= comment.cleaniness %>
+</p>
+ 
+<p>
+  <b>Comment:</b>
+  <%= comment.comment %>
+</p>
+<p>
+  <%= link_to 'Delete Comment', [comment.bathroom, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

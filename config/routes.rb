@@ -1,5 +1,9 @@
 Gottago::Application.routes.draw do
-  resources :bathrooms
+
+
+  resources :bathrooms do
+    resources :comments
+  end
 
 
   get "home/index"
