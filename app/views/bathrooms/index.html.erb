@@ -1,32 +1,26 @@
-<h1>Gotta Go</h1>
-<h2>Listing bathrooms</h2>
-
-<table>
-  <tr>
-    <th>Building</th>
-    <th>Floor</th>
-    <th>Gender</th>
-    <th>Cleanliness</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @bathrooms.each do |bathroom| %>
-  <tr>
-    <td><%= bathroom.building %></td>
-    <td><%= bathroom.floor %></td>
-    <td><%= bathroom.gender %></td>
-    <td><%= bathroom.cleanliness %></td>
-    <td><%= bathroom.notes %></td>
-    <td><%= link_to 'Show', bathroom %></td>
-    <td><%= link_to 'Edit', edit_bathroom_path(bathroom) %></td>
-    <td><%= link_to 'Destroy', bathroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div data-role ='header' data-theme='e'>
+    <h1>GottaGo</h1>
+    <%= link_to 'New Bathroom', new_bathroom_path , "data-role" => "button" , "data-icon" => "plus",
+    "data-iconpos" => "notext" %>
+</div>
+<ul data-role='listview'>
+    <% @bathrooms.each do |bathroom| %>
+    <li data-theme="c">
+        <%= link_to(bathroom) do%>
+        <img src="assets/RSS_toilet.png">
+        <h1><%= bathroom.building %></h1>
+        <p><%= bathroom.notes %></p>
+        <% end %>
+    </li>
 <% end %>
-</table>
+</ul>
 
-<br />
-
-<%= link_to 'New Bathroom', new_bathroom_path %>
+<footer data-role='footer' data-theme='e'>
+    <nav data-role='navbar'>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Suggestions</a></li>
+        </ul>
+    <nav>
+</footer>
