@@ -6,8 +6,8 @@
 <ul data-role='listview'>
     <% @bathrooms.each do |bathroom| %>
     <li data-theme="c">
-        <%= link_to(bathroom) do%>
-        <img src="assets/RSS_toilet.png">
+        <%= link_to(bathroom) do %>
+        <%= image_tag "RSS_toilet.png" %>
         <h1><%= bathroom.building %></h1>
         <p><%= bathroom.notes %></p>
         <% end %>
