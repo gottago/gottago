@@ -20,14 +20,22 @@
     <%= f.number_field :floor %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.check_box :gender %>
+    <%= f.label :gender %>
+    <%= f.radio_button :gender, "male" %>
+    <%= f.label :gender_male, "Male" %>
+    <%= f.radio_button :gender, "female" %>
+    <%= f.label :gender_female, "Female" %>
   </div>
   <div class="field">
-    <%= f.label :cleanliness %><br />
-    <%= f.number_field :cleanliness %>
+    <%= f.label :cleanliness %>
+    <%= f.radio_button :cleanliness, "1" %>
+    <%= f.label :cleanliness_1, "Bad" %>
+    <%= f.radio_button :cleanliness, "2" %>
+    <%= f.label :cleanliness_2, "Average" %>
+    <%= f.radio_button :cleanliness, "3" %>
+    <%= f.label :cleanliness_3, "Good" %>
   </div>
-  <div class="field">
+  <div class="field"3
     <%= f.label :notes %><br />
     <%= f.text_area :notes %>
   </div>
