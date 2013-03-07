@@ -17,7 +17,7 @@
   <tr>
     <td><%= bathroom.building %></td>
     <td><%= bathroom.floor %></td>
-    <td><%= bathroom.gender %></td>
+    <td><%= bathroom.gender.to_s.capitalize %></td>
     <td><%= bathroom.cleanliness %></td>
     <td><%= bathroom.notes %></td>
     <td><%= link_to 'Show', bathroom %></td>
