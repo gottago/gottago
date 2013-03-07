@@ -11,21 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302205730) do
+ActiveRecord::Schema.define(:version => 20130307025613) do
 
-  create_table "bathrooms", :force => true do |t|
-    t.string   "building"
-    t.integer  "floor"
-    t.boolean  "gender"
-    t.integer  "cleanliness"
-    t.text     "notes"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+# Could not dump table "bathrooms" because of following StandardError
+#   Unknown type 'gender_t' for column 'gender'
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
-    t.integer  "cleaniness"
+    t.integer  "cleanliness"
     t.text     "comment"
     t.integer  "bathroom_id"
     t.datetime "created_at",  :null => false

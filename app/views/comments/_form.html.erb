@@ -12,12 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :commenter %><br />
+    <%= f.label :your_name %><br />
     <%= f.text_field :commenter %>
   </div>
   <div class="field">
-    <%= f.label :cleaniness %><br />
-    <%= f.number_field :cleaniness %>
+    <%= f.label :cleanliness %>
+    <%= f.radio_button :cleanliness, "1" %>
+    <%= f.label :cleanliness_1, "Bad" %>
+    <%= f.radio_button :cleanliness, "2" %>
+    <%= f.label :cleanliness_2, "Average" %>
+    <%= f.radio_button :cleanliness, "3" %>
+    <%= f.label :cleanliness_3, "Good" %>
   </div>
   <div class="field">
     <%= f.label :comment %><br />
